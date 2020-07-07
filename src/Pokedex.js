@@ -1,3 +1,7 @@
+import React from 'react';
+import Pokecard from './Pokecard'
+import './Pokedex.css';
+
 function Pokedex() {
     const defaults = [
         {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
@@ -10,13 +14,19 @@ function Pokedex() {
         {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
     ];
     return (
-      <div className="Pokedex">
-          {defaults.map(c => <Pokecard 
-            id={c.id} 
-            name={c.name} 
-            type={c.type} 
-            base_experience={c.base_experience} 
-          />)}
-      </div>
+        <div className="Pokedex">
+            <h1 className="Pokedex-h1">Pokedex</h1>
+            <div className="Pokedex-container">
+                {defaults.map(c => <Pokecard 
+                    key={c.id}
+                    id={c.id} 
+                    name={c.name} 
+                    type={c.type} 
+                    base_experience={c.base_experience} 
+                />)}
+            </div>
+        </div>
     );
 }
+
+export default Pokedex;

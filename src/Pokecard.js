@@ -1,3 +1,6 @@
+import React from 'react';
+import './Pokecard.css';
+
 function Pokecard(props) {
     let {id, name, type, base_experience} = props;
     let imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
@@ -10,3 +13,5 @@ function Pokecard(props) {
       </div>
     );
 }
+
+export default Pokecard;
